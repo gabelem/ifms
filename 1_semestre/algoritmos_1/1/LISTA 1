@@ -1,0 +1,174 @@
+1. Lista de exercícios
+
+ 1. A Linguagem C tem como principal característica a Imperatividade que é definida como uma sequência lógica de passos com a possibilidade de diversos caminhos para alcançar um mesmo resultado.
+
+ 2. Identificadores na Linguagem C determinam variáveis, funções, etc, criadas com um nome específico pelo desenvolvedor.
+
+3. Antes de atribuir um valor a uma variável, é necessário definir o tipo de dado que aquela variável vai guardar. Por exemplo:
+
+Int: Guarda um número inteiro (ex. 12)
+
+Float: pode guardar números com ponto flutuante (1,20)
+
+Char: Guardam caracteres
+
+4. O termo pré-definido significa que certo código na linguagem C já foi determinado anteriormente para cumprir uma função e esse código é alocado nas bibliotecas padrões da linguagem.
+
+5. int, float, char
+
+
+6.
+int main() {
+int var1;
+var1 = 10;
+
+printf(var1);
+
+return 0;
+}
+
+7. Bibliotecas são códigos pré-definidos que geralmente atuam em funções essenciais da linguagem C, por exemplo o printf(“”) que foi definido para facilitar a vida do programador na hora de fazer o famoso printf(‘Hello World’);. Essas bibliotecas podem ser acionadas a partir do uso de #include <nome_da_biblioteca.h> no início do código.
+
+8. 
+printf é utilizado como output, por exemplo: 
+printf("Hello World");
+> Resulta na mensagem: Hello World
+
+OU printf("%dvariavel1"), se estiver um valor atribuído nessa variável, ela vai aparecer na tela..
+
+scanf é usado como input do usuário, por exemplo:
+scanf("Insira seu nome");
+> Possibilita ao usuário inserir seus dados.
+
+
+9.
+#include <stdio.h>
+#include <math.h>
+int  main() {
+int a, b , c;
+
+a = 2;
+b = 8;
+c = a+b;
+
+printf("Resultado de A+B= %d", c);
+printf("\nAperte ENTER para finalizar a exec. do programa e ignore o erro..");
+scanf("%c");
+return 0;
+}
+
+10. Não, pois eles seguem a lógica das operações matemáticas.
+
+
+11.
+#include <stdio.h>
+int main() {
+
+int valor;
+valor = 0;
+printf("Digite um valor inteiro: ");
+scanf("%d", &valor);
+printf("Olha ele ai: %d", valor);
+
+return 0;
+}
+
+
+12.
+#include <stdio.h>
+int main() {
+	int base, altura, resultado;
+	printf("Insira o comprimento da base: ");
+	scanf("%d", &base);
+
+	printf("Insira o valor da altura: ");
+	scanf("%d", &altura);
+
+	resultado = base*altura;
+
+	printf("Resultado: %d",resultado), printf("\n");
+	return 0;
+}  
+
+
+13.
+#include <stdio.h>
+int main() {
+	int valor_inserido;
+
+	printf("Insira um valor: ");
+	scanf("%d", &valor_inserido);
+
+	if (valor_inserido == 10) {
+		printf("VALOR=10");
+	}
+	
+	if (valor_inserido >= 11) {
+		printf("VALOR > 10");
+	}
+	
+	if (valor_inserido <= 9) {
+	printf("VALOR < 10");
+	}
+	return 0;
+}
+
+
+14.
+#include <stdio.h>
+int main() {
+	int par, impar;
+	par = 2;
+	impar = 4;
+
+	if (par = 2) {
+	printf("PAR");
+	}
+	
+	if (impar <= 1) {
+	printf("IMPAR");
+	}
+return 0;
+}
+
+15.
+#include <stdio.h>
+#include <time.h>
+int main() {
+	int ano, ano_de_nascimento;
+	printf("Em que ano estamos? \n");
+	scanf("%d", &ano);
+	
+	printf("Insira o ano do seu nascimento \n");
+	scanf("%d", &ano_de_nascimento);
+
+	if (ano_de_nascimento <= 2008) {
+	printf("Apto ao voto\n");
+	}
+	if (ano_de_nascimento >= 2009) {
+	printf("Falso, usuario nn apto ao voto..\n");
+	}
+return 0;
+}
+
+
+16.
+#include <stdio.h>
+int main() {
+	int valor_x,valor_y;
+
+	printf("Insira um valor:\n");
+	scanf("%d",&valor_x);
+
+	printf("Insira OUTRO valor:\n");
+	scanf("%d",&valor_y);
+
+	if (valor_x > valor_y) {
+	printf("%d%", valor_x);
+	}
+	
+	if (valor_y > valor_x) {
+	printf("%d", valor_y);
+	}
+	return 0;
+}
