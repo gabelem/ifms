@@ -1,3 +1,0 @@
-AO EXECUTAR O GCC UTILIZE O COMANDO:
-
-gcc menu.c -lm
