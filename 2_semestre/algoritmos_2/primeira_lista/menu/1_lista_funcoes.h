@@ -1,0 +1,4 @@
+void saudacao() 
+  {
+  printf("OI");
+  }
