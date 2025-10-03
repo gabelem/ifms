@@ -44,23 +44,24 @@ int main()
   quantidade[4].idade = 20;
   quantidade[4].altura = 1.78;
   
+  int k = 0;
   int j = 1;
   int guardar = 0;
-  for(int i = 0; i < 6; i++)
+  for(int i = 0; i < 5; i++)
     {
-    if(quantidade[i].idade > quantidade[j].idade)
+    if(quantidade[k].idade > quantidade[j].idade)
       {
-      guardar = quantidade[i].idade;
       j++;
       }
-        else
+      else
         {
-        quantidade[i].idade = quantidade[j].idade;
+        guardar = quantidade[k].idade;
+        quantidade[k].idade = quantidade[j].idade;
         quantidade[j].idade = guardar;
+        k++;
         }
     }
-    
-    printf("%d %d %d %d %d", quantidade[0].idade, quantidade[1].idade, quantidade[2].idade, quantidade[3].idade, quantidade[4].idade);
-    
+  
+  printf("%d %d %d %d %d", quantidade[0].idade, quantidade[1].idade, quantidade[2].idade, quantidade[3].idade, quantidade[4].idade);
   return 0;
   }
