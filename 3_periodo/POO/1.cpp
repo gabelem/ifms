@@ -1,23 +1,31 @@
 #include <iostream>
+#include <string>
 #include <vector>
+#include <array>
 using namespace std;
 
-class Livro 
+class Biblioteca
   {
+  public:
   string titulo;
   string autor;
-  int ano_de_publicacacao;
-
-  public:
-
+  int ano_de_publicacao; 
   };
 
-class Biblioteca 
+int main()
   {
-  std::vector<Livro> colecao;
-  };
+  int quantidade = 0;
+  struct Biblioteca Livro;
 
-int main() 
-  {
-  
+  cout << "Digite a quantidade de livros para registrar: ";
+  cin >> quantidade;
+
+  for(int i = 0; i < 1; i++)
+    {
+    cout << "Digite no seguinte formato (titulo) (autor) (ano_de_publicacao): ";
+    cin >> Livro.titulo >> Livro.autor >> Livro.ano_de_publicacao;
+    cout << Livro.titulo << " " << Livro.autor << " " << Livro.ano_de_publicacao << "\n";
+    }
+
+  return 0;
   }
