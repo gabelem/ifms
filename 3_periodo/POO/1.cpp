@@ -1,31 +1,50 @@
 #include <iostream>
-#include <string>
-#include <vector>
 #include <array>
+#include <cstring>
+
 using namespace std;
 
 class Biblioteca
   {
   public:
-  string titulo;
-  string autor;
-  int ano_de_publicacao; 
+  char titulo[100];
+  char autor[100];
+  int ano_de_publicacao;
   };
 
 int main()
   {
-  int quantidade = 0;
-  struct Biblioteca Livro;
+  int quantidade = 1;
+  Biblioteca Livro[quantidade];
 
-  cout << "Digite a quantidade de livros para registrar: ";
-  cin >> quantidade;
+  strcpy(Livro[0].titulo,"Titulo");
+  strcpy(Livro[0].autor,"Autor");
+  Livro[0].ano_de_publicacao = 0000;
 
-  for(int i = 0; i < 1; i++)
+  int escolha = 0;
+
+    do
     {
-    cout << "Digite no seguinte formato (titulo) (autor) (ano_de_publicacao): ";
-    cin >> Livro.titulo >> Livro.autor >> Livro.ano_de_publicacao;
-    cout << Livro.titulo << " " << Livro.autor << " " << Livro.ano_de_publicacao << "\n";
-    }
+    cout << "\n1. Adicionar Livro\n2. Listar\n3. Fechar\n: ";
+    cin >> escolha;
+    cout << "\n";
+
+    if(escolha == 1)
+      {
+      cout << "Utilize a seguinte sequencia para adicionar teu livro (Titulo) (Autor) (Ano de publicacao)\n: ";
+      cin >> Livro[quantidade].titulo >> Livro[quantidade].autor >> Livro[quantidade].ano_de_publicacao;
+      quantidade++;
+      }
+
+
+    if(escolha == 2)
+      {
+      for(int i = 0; i < quantidade; i++)
+        {
+        cout << Livro[i].titulo << " " << Livro[i].autor << " " << Livro[i].ano_de_publicacao << "\n";
+	}
+      }
+    }while(escolha != 3);
 
   return 0;
   }
