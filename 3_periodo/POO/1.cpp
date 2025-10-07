@@ -1,6 +1,7 @@
 #include <iostream>
 #include <array>
 #include <cstring>
+#include <vector>
 
 using namespace std;
 
@@ -19,13 +20,15 @@ int main()
 
   strcpy(Livro[0].titulo,"Titulo");
   strcpy(Livro[0].autor,"Autor");
-  Livro[0].ano_de_publicacao = 0000;
+  Livro[0].ano_de_publicacao = 1998;
 
   int escolha = 0;
 
+  int coluna = 0;
+
     do
     {
-    cout << "\n1. Adicionar Livro\n2. Listar\n3. Fechar\n: ";
+    cout << "\n1. Adicionar Livro\n2. Listar\n3. Remover Livro \n4. Fechar\n: ";
     cin >> escolha;
     cout << "\n";
 
@@ -41,10 +44,20 @@ int main()
       {
       for(int i = 0; i < quantidade; i++)
         {
-        cout << Livro[i].titulo << " " << Livro[i].autor << " " << Livro[i].ano_de_publicacao << "\n";
+        cout << i<< " " << Livro[i].titulo << " " << Livro[i].autor << " " << Livro[i].ano_de_publicacao << "\n";
 	}
       }
-    }while(escolha != 3);
+
+    if(escolha == 3)
+      {
+      cout << "Digite o numero do livro que deseja deletar: ";
+      cin >> coluna;
+
+      strcpy(Livro[coluna].titulo, "\0");
+      strcpy(Livro[coluna].autor, "\0");
+      Livro[coluna].ano_de_publicacao = 0; 
+      }
+    }while(escolha != 4);
 
   return 0;
   }
