@@ -41,8 +41,8 @@ class Inimigo
 
 int main()
   {
-  Jogador("Papel", "Espada", "Gabriel", 2, 5);
-  Inimigo("Garrafa", 10);
+  Jogador("Suco de uva", "Sniper", "Cleitoon", 1, 2);
+  Inimigo("Espada de ferro", 10);
 
   return 0;
   }
