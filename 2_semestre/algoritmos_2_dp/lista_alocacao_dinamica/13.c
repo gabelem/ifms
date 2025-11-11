@@ -32,6 +32,20 @@ int main()
     k++;
   }
 
+  int baixo = 0;
+  for(int z = 1; z < N; z++)
+  {
+    ptr[z][baixo] = -1 ;
+    baixo++;
+  }
+
+  int cima = 1;
+  for(int p = 0; p < N; p++)
+  {
+    ptr[p][cima] = 1;
+    cima++;
+  }
+
   for(int l = 0 ; l < N; l++)
   {
     for(int m = 0; m < N; m++)
