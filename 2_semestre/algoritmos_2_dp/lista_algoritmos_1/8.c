@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+
+{
+    int n, valor, soma = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &valor);
+        soma += valor;
+    }
+
+    printf("Soma = %d\n", soma);
+
+    return 0;
+}
+
